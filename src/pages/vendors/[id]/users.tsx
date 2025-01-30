@@ -17,7 +17,7 @@ import { BreadCrumb } from '../../../components';
 import { getSeverity } from '../../../utils';
 
 export const getServerSideProps: GetServerSideProps = async context =>
-    getAuthorized(context, 'User Management | Vendor | Admin Panel | TripHaat', async cookies => {
+    getAuthorized(context, 'User Management | Vendor | Admin Panel | Tripo', async cookies => {
         const vendorId = context.query.id as string;
 
         const responseGetVendor = await getVendorById(vendorId, `${cookies.accessType} ${cookies.accessToken}`);

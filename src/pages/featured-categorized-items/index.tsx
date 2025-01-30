@@ -17,7 +17,7 @@ import { getFormattedDatetime, DATE_FORMAT } from '../../utils/date';
 import { UrlBasedColumnItem } from '../../components';
 
 export const getServerSideProps: GetServerSideProps = async context =>
-    getAuthorized(context, 'Featured Trip Management | Admin Panel | TripHaat', () => {
+    getAuthorized(context, 'Featured Trip Management | Admin Panel | Tripo', () => {
         return null;
     });
 

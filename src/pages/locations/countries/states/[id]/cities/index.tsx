@@ -14,7 +14,7 @@ import { getStateById } from '../../../../../../apis';
 import GenericViewGenerator from '../../../../../../components/global/GenericViewGenerator';
 
 export const getServerSideProps: GetServerSideProps = async context =>
-    getAuthorized(context, 'State Management | Admin Panel | TripHaat', async cookies => {
+    getAuthorized(context, 'State Management | Admin Panel | Tripo', async cookies => {
         const id: string = context.query.id as string;
 
         const response = await getStateById(id, `${cookies.accessType} ${cookies.accessToken}`);

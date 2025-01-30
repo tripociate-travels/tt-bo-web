@@ -172,7 +172,7 @@ LoginPage.getLayout = function getLayout(page) {
     return (
         <>
             <Head>
-                <title>{`Login | Vendor Panel | triphaat.com`}</title>
+                <title>{`Login | Vendor Panel | tripociate.com`}</title>
             </Head>
             {page}
             {/* <AppConfig simple /> */}

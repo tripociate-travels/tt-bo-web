@@ -14,7 +14,7 @@ import { getGeneralStatusOptions } from '../../utils';
 import { UrlBasedColumnItem } from '../../components';
 
 export const getServerSideProps: GetServerSideProps = async context =>
-    getAuthorized(context, 'Blog Management | Admin Panel | TripHaat', async cookies => {
+    getAuthorized(context, 'Blog Management | Admin Panel | Tripo', async cookies => {
         const responseGetBlogTopics = await getBlogTopics(`${cookies.accessType} ${cookies.accessToken}`);
         const responseGetBlogTags = await getBlogTags(`${cookies.accessType} ${cookies.accessToken}`);
 

@@ -13,7 +13,7 @@ import { getUserManagementFields } from '../../users';
 import { getSeverity } from '../../../utils';
 
 export const getServerSideProps: GetServerSideProps = async context =>
-    getAuthorized(context, 'User Management | Administration | Vendor Panel | TripHaat', () => {
+    getAuthorized(context, 'User Management | Administration | Vendor Panel | Tripo', () => {
         return {
             isVendor: true,
         };

@@ -12,7 +12,7 @@ import { getAuthorized } from '../../libs/auth';
 import GenericViewGenerator from '../../components/global/GenericViewGenerator';
 
 export const getServerSideProps: GetServerSideProps = async context =>
-    getAuthorized(context, 'Role Management | Admin Panel | TripHaat');
+    getAuthorized(context, 'Role Management | Admin Panel | Tripo');
 
 const Page = () => {
     const router = useRouter();

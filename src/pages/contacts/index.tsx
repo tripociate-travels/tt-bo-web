@@ -11,7 +11,7 @@ import { collection, db, query, orderBy, getDocs } from '../../libs/firebase';
 import { DataTable } from '../../components';
 
 export const getServerSideProps: GetServerSideProps = async context =>
-    getAuthorized(context, 'Contacts | Admin Panel | TripHaat', cookies => {
+    getAuthorized(context, 'Contacts | Admin Panel | Tripo', cookies => {
         return null;
     });
 

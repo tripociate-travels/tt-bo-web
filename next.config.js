@@ -11,6 +11,12 @@ const nextConfig = {
             },
             {
                 protocol: 'http',
+                hostname: '0.0.0.0',
+                port: '8079',
+                pathname: '/**',
+            },
+            {
+                protocol: 'http',
                 hostname: 'localhost',
                 port: '8081',
                 pathname: '/**',
@@ -20,30 +26,6 @@ const nextConfig = {
                 hostname: '0.0.0.0',
                 port: '8081',
                 pathname: '/**',
-            },
-            {
-                protocol: 'https',
-                hostname: 'beta.s2.triphaat.com',
-                port: '',
-                pathname: '/**',
-            },
-            {
-                protocol: 'https',
-                hostname: 's2.triphaat.com',
-                port: '',
-                pathname: '/**',
-            },
-            {
-                protocol: 'https',
-                hostname: 'beta.triphaat.com',
-                port: '',
-                pathname: '/**',
-            },
-            {
-                protocol: 'https',
-                hostname: 'triphaat.com',
-                port: '',
-                pathname: '/assets/images/**',
             },
             {
                 protocol: 'https',

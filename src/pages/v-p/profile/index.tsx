@@ -24,7 +24,7 @@ import { getFormData } from '../../../utils';
 import { showToast } from '../../../utils/toast';
 
 export const getServerSideProps: GetServerSideProps = async context =>
-    getAuthorized(context, 'Profile | Administration | Vendor Panel | TripHaat', async cookies => {
+    getAuthorized(context, 'Profile | Administration | Vendor Panel | Tripo', async cookies => {
         const responseGetVendorProfile = await getVendorProfile(`${cookies.accessType} ${cookies.accessToken}`);
 
         if (!responseGetVendorProfile || responseGetVendorProfile.statusCode !== 200) {

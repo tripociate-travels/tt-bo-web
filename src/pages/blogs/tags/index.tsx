@@ -12,7 +12,7 @@ import GenericViewGenerator from '../../../components/global/GenericViewGenerato
 import { getGeneralStatusOptions } from '../../../utils';
 
 export const getServerSideProps: GetServerSideProps = async context =>
-    getAuthorized(context, 'Blog Tag | Blog Management | Admin Panel | TripHaat', cookies => {
+    getAuthorized(context, 'Blog Tag | Blog Management | Admin Panel | Tripo', cookies => {
         return null;
     });
 

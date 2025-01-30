@@ -14,7 +14,7 @@ import { IField } from '../../components/global/GenericFormGenerator';
 import { getSeverity, getUserStatusOptions } from '../../utils';
 
 export const getServerSideProps: GetServerSideProps = async context =>
-    getAuthorized(context, 'User Management | Admin Panel | TripHaat');
+    getAuthorized(context, 'User Management | Admin Panel | Tripo');
 
 export const getUserManagementFields = (roles: { id: number; name: string }[], isVendor: boolean = false): IField[] => [
     {

@@ -34,7 +34,7 @@ const AppTopbar = forwardRef<AppTopbarRef>((props, ref) => {
     return (
         <div className="layout-topbar">
             <Link href="/" className="layout-topbar-logo">
-                <img src={'/images/triphaat-1920x720.png'} width="auto" height={'100%'} alt="bo.triphaat.com" />
+                <img src={'/images/tripociate-1920x720.png'} width="auto" height={'100%'} alt="bo.tripociate.com" />
             </Link>
 
             <button

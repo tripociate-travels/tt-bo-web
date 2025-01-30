@@ -14,7 +14,7 @@ import { getCityById } from '../../apis';
 import GenericViewGenerator from '../../components/global/GenericViewGenerator';
 
 export const getServerSideProps: GetServerSideProps = async context =>
-    getAuthorized(context, 'Location Management | Admin Panel | TripHaat');
+    getAuthorized(context, 'Location Management | Admin Panel | Tripo');
 
 const Page = () => {
     const router = useRouter();

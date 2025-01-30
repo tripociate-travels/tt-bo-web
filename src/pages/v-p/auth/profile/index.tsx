@@ -12,7 +12,7 @@ import { getProfile } from '../../../../apis';
 import { getUserManagementFields } from '../../../users';
 
 export const getServerSideProps: GetServerSideProps = async context =>
-    getAuthorized(context, 'Profile | Auth | Vendor Panel | TripHaat', async cookies => {
+    getAuthorized(context, 'Profile | Auth | Vendor Panel | Tripo', async cookies => {
         const responseGetProfile = await getProfile(`${cookies.accessType} ${cookies.accessToken}`);
         // console.debug({ responseGetProfile });
 

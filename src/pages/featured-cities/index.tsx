@@ -16,7 +16,7 @@ import { getGeneralStatusOptions } from '../../utils';
 import { UrlBasedColumnItem } from '../../components';
 
 export const getServerSideProps: GetServerSideProps = async context =>
-    getAuthorized(context, 'Featured City Management | Admin Panel | TripHaat', () => {
+    getAuthorized(context, 'Featured City Management | Admin Panel | Tripo', () => {
         return null;
     });
 

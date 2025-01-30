@@ -86,7 +86,7 @@ const LoginPage: Page = () => {
                         onSubmit={formik.handleSubmit}
                     >
                         <div className="text-center mb-5">
-                            <div className="text-900 text-3xl font-medium mb-3">Welcome, TripHaat Admin!</div>
+                            <div className="text-900 text-3xl font-medium mb-3">Welcome, Tripo Admin!</div>
                             <span className="text-600 font-medium">Sign in to continue</span>
                         </div>
 
@@ -185,7 +185,7 @@ LoginPage.getLayout = function getLayout(page) {
     return (
         <>
             <Head>
-                <title>{`Login | Admin Panel | triphaat.com`}</title>
+                <title>{`Login | Admin Panel | tripociate.com`}</title>
             </Head>
             {page}
             {/* <AppConfig simple /> */}

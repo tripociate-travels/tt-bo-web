@@ -12,7 +12,7 @@ import { getAuthorized } from '../../../libs/auth';
 import GenericViewGenerator from '../../../components/global/GenericViewGenerator';
 
 export const getServerSideProps: GetServerSideProps = async context =>
-    getAuthorized(context, 'Country Management | Admin Panel | TripHaat', cookies => {
+    getAuthorized(context, 'Country Management | Admin Panel | Tripo', cookies => {
         return null;
     });
 

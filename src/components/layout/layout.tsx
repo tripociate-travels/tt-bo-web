@@ -132,7 +132,7 @@ const Layout = ({ title, isVendor, children }: ILayout) => {
     return (
         <>
             <Head>
-                <title>{`${title} | ${!isVendor ? 'Admin Panel' : 'Vendor Panel'} | triphaat.com`}</title>
+                <title>{`${title} | ${!isVendor ? 'Admin Panel' : 'Vendor Panel'} | tripociate.com`}</title>
                 <link rel="icon" href={`/favicon.ico`} type="image/x-icon"></link>
             </Head>
 

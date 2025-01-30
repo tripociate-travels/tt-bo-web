@@ -7,7 +7,7 @@ const AppFooter = () => {
         <div className="layout-footer">
             <span className="font-medium">All rights reserved by</span>
             <span className="font-medium ml-1">
-                <strong>triphaat.com</strong>
+                <strong>tripociate.com</strong>
             </span>
         </div>
     );

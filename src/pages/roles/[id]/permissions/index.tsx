@@ -10,7 +10,7 @@ import GenericViewGenerator from '../../../../components/global/GenericViewGener
 import { getModuleNames, getPermissionTypes } from '../../../../apis';
 
 export const getServerSideProps: GetServerSideProps = async context =>
-    getAuthorized(context, 'Permission Management | Role Management | Admin Panel | TripHaat', () => {
+    getAuthorized(context, 'Permission Management | Role Management | Admin Panel | Tripo', () => {
         const roleId = context.query.id;
 
         // console.debug({ roleId });

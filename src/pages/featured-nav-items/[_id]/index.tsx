@@ -14,7 +14,7 @@ import GenericViewGenerator from '../../../components/global/GenericViewGenerato
 import { getNavItemFields } from '..';
 
 export const getServerSideProps: GetServerSideProps = async context =>
-    getAuthorized(context, 'Featured Nav Item Management | Admin Panel | TripHaat', cookies => {
+    getAuthorized(context, 'Featured Nav Item Management | Admin Panel | Tripo', cookies => {
         const parentId = context.query._id as string;
 
         return {

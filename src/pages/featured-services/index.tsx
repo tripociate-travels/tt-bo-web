@@ -11,7 +11,7 @@ import GenericViewGenerator from '../../components/global/GenericViewGenerator';
 import { getGeneralStatusOptions } from '../../utils';
 
 export const getServerSideProps: GetServerSideProps = async context =>
-    getAuthorized(context, 'Featured Service Management | Admin Panel | TripHaat', cookies => {
+    getAuthorized(context, 'Featured Service Management | Admin Panel | Tripo', cookies => {
         return null;
     });
 

@@ -1,7 +1,7 @@
 module.exports = {
     apps: [
         {
-            name: 'triphaat-bo-web',
+            name: 'tripociate-bo-web',
             script: './server.js',
             instances: 2,
             exec_mode: 'cluster',

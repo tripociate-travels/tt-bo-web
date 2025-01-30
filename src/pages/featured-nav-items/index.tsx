@@ -65,7 +65,7 @@ export const getNavItemFields = () => [
 ];
 
 export const getServerSideProps: GetServerSideProps = async context =>
-    getAuthorized(context, 'Featured Nav Item Management | Admin Panel | TripHaat');
+    getAuthorized(context, 'Featured Nav Item Management | Admin Panel | Tripo');
 
 const Page = () => {
     const router = useRouter();

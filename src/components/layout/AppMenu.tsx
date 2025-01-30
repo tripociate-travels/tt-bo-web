@@ -8,7 +8,7 @@ import { AppMenuItem } from '../../types/types';
 const AppMenu = ({ isVendor }: { isVendor?: boolean }) => {
     let model: AppMenuItem[] = [];
 
-    const triphaatAdminMenuModel = [
+    const tripoAdminMenuModel = [
         {
             label: 'Home',
             items: [{ icon: 'pi pi-fw pi-home', label: 'Dashboard', to: '/' }],
@@ -184,7 +184,7 @@ const AppMenu = ({ isVendor }: { isVendor?: boolean }) => {
     ];
 
     if (!isVendor) {
-        model = triphaatAdminMenuModel;
+        model = tripoAdminMenuModel;
     } else {
         model = vendorAdminMenuModel;
     }

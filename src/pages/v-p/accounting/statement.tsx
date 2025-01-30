@@ -21,7 +21,7 @@ import {
 import { DATE_FORMAT, getFormattedDatetime } from '../../../utils/date';
 
 export const getServerSideProps: GetServerSideProps = async context =>
-    getAuthorized(context, 'Statement | Accounting | Vendor Panel | TripHaat', () => {
+    getAuthorized(context, 'Statement | Accounting | Vendor Panel | Tripo', () => {
         return {
             isVendor: true,
         };

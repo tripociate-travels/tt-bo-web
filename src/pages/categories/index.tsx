@@ -16,7 +16,7 @@ import { IField } from '../../components/global/GenericFormGenerator';
 import { UrlBasedColumnItem } from '../../components';
 
 export const getServerSideProps: GetServerSideProps = async context =>
-    getAuthorized(context, 'Category Management | Admin Panel | TripHaat');
+    getAuthorized(context, 'Category Management | Admin Panel | Tripo');
 
 const Page = () => {
     const router = useRouter();
