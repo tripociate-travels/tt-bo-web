@@ -1,7 +1,7 @@
 import { callPostApi, callGetApi, callPutApi, callDeleteApi } from '../libs/api';
 import { apiBaseUrl } from '../config/env';
 
-// TRIPHAAT admin APIs
+// TRIPO admin APIs
 
 export const login = (payload: { email: string; password: string; type: string }) =>
     callPostApi(apiBaseUrl + '/api/v1/auth/sign-in', payload, null, null, true);

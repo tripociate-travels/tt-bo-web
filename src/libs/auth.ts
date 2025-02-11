@@ -103,7 +103,7 @@ export const getAuthorized = async (
         };
     }
 
-    if (cookies.user.type === 'TRIPHAAT_ADMIN' && context.req.url?.includes('/v-p')) {
+    if (cookies.user.type === 'TRIPO_ADMIN' && context.req.url?.includes('/v-p')) {
         return {
             redirect: {
                 destination: '/',

@@ -42,7 +42,7 @@ const LoginPage: Page = () => {
         onSubmit: (values: FormikValues, { setSubmitting }) => {
             setSubmitting(true);
 
-            login({ email: values.email, password: values.password, type: 'TRIPHAAT_ADMIN' })
+            login({ email: values.email, password: values.password, type: 'TRIPO_ADMIN' })
                 .then(response => {
                     if (!response) if (!response) throw { message: 'Server not working!' };
 
