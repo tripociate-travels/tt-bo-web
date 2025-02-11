@@ -44,6 +44,8 @@ export const getTripByIdAndCategoryId = (id: string, categoryId: string, authori
 export const getTripByIdAndClientId = (id: string, clientId: string, authorization?: string | null) =>
     callGetApi(apiBaseUrl + `/api/v1/clients/${clientId}/trips/${id}`, authorization);
 
+export const getBlogAuthors = (authorization: string) => callGetApi(apiBaseUrl + '/api/v1/blog-authors', authorization);
+
 export const getBlogTopics = (authorization: string) => callGetApi(apiBaseUrl + '/api/v1/blog-topics', authorization);
 
 export const getBlogTags = (authorization: string) => callGetApi(apiBaseUrl + '/api/v1/blog-tags', authorization);

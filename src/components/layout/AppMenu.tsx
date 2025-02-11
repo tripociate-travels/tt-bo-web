@@ -120,6 +120,10 @@ const AppMenu = ({ isVendor }: { isVendor?: boolean }) => {
                     label: 'Blog Management',
                     items: [
                         {
+                            label: 'Blog Authors',
+                            to: '/blogs/authors',
+                        },
+                        {
                             label: 'Blog Topics',
                             to: '/blogs/topics',
                         },

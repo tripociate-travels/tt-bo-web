@@ -12,7 +12,7 @@ import GenericViewGenerator from '../../../components/global/GenericViewGenerato
 import { getGeneralStatusOptions } from '../../../utils';
 
 export const getServerSideProps: GetServerSideProps = async context =>
-    getAuthorized(context, 'Blog Topic | Blog Management | Admin Panel | Tripo', cookies => {
+    getAuthorized(context, 'Blog Author | Blog Management | Admin Panel | Tripo', cookies => {
         return null;
     });
 
@@ -24,11 +24,11 @@ const Page = () => {
             {useMemo(
                 () => (
                     <GenericViewGenerator
-                        name={'Blog Topic'}
-                        title={'Blog Topics'}
-                        subtitle={'Manage blog topics here!'}
+                        name={'Blog Author'}
+                        title={'Blog Authors'}
+                        subtitle={'Manage blog authors here!'}
                         viewAll={{
-                            uri: `/api/v1/blog-topics`,
+                            uri: `/api/v1/blog-authors`,
                             ignoredColumns: ['id', 'createdAt', 'updatedAt'],
                             actionIdentifier: 'id',
                             onDataModify: data =>
@@ -37,12 +37,12 @@ const Page = () => {
                                 })),
                         }}
                         addNew={{
-                            uri: `/api/v1/blog-topics`,
+                            uri: `/api/v1/blog-authors`,
                         }}
-                        viewOne={{ uri: '/api/v1/blog-topics/{id}', identifier: '{id}' }}
-                        editExisting={{ uri: '/api/v1/blog-topics/{id}', identifier: '{id}' }}
+                        viewOne={{ uri: '/api/v1/blog-authors/{id}', identifier: '{id}' }}
+                        editExisting={{ uri: '/api/v1/blog-authors/{id}', identifier: '{id}' }}
                         removeOne={{
-                            uri: '/api/v1/blog-topics/{id}',
+                            uri: '/api/v1/blog-authors/{id}',
                             identifier: '{id}',
                         }}
                         customActions={[]}
@@ -50,43 +50,7 @@ const Page = () => {
                             {
                                 type: 'text',
                                 name: 'name',
-                                placeholder: 'Enter topic name!',
-                                title: 'Name',
-                                initialValue: null,
-                                validate: (values: any) => {
-                                    if (!values.name) return 'Required!';
-
-                                    return null;
-                                },
-                            },
-                            {
-                                type: 'text',
-                                name: 'thumbnailUrl',
-                                placeholder: 'Enter topic thumbnail URL!',
-                                title: 'Thumbnail Url',
-                                initialValue: null,
-                                validate: (values: any) => {
-                                    if (!values.thumbnailUrl) return 'Required!';
-
-                                    return null;
-                                },
-                            },
-                            {
-                                type: 'text',
-                                name: 'bannerUrl',
-                                placeholder: 'Enter topic banner URL!',
-                                title: 'Banner Url',
-                                initialValue: null,
-                                validate: (values: any) => {
-                                    if (!values.bannerUrl) return 'Required!';
-
-                                    return null;
-                                },
-                            },
-                            {
-                                type: 'text',
-                                name: 'name',
-                                placeholder: 'Enter topic name!',
+                                placeholder: 'Enter author name!',
                                 title: 'Name',
                                 initialValue: null,
                                 validate: (values: any) => {

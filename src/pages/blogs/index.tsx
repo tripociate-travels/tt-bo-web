@@ -8,17 +8,20 @@ import _ from 'lodash';
 
 // application
 import { getAuthorized } from '../../libs/auth';
-import { getBlogTags, getBlogTopics } from '../../apis';
+import { getBlogAuthors, getBlogTopics, getBlogTags } from '../../apis';
 import GenericViewGenerator from '../../components/global/GenericViewGenerator';
 import { getGeneralStatusOptions } from '../../utils';
 import { UrlBasedColumnItem } from '../../components';
 
 export const getServerSideProps: GetServerSideProps = async context =>
     getAuthorized(context, 'Blog Management | Admin Panel | Tripo', async cookies => {
+        const responseGetBlogAuthors = await getBlogAuthors(`${cookies.accessType} ${cookies.accessToken}`);
         const responseGetBlogTopics = await getBlogTopics(`${cookies.accessType} ${cookies.accessToken}`);
         const responseGetBlogTags = await getBlogTags(`${cookies.accessType} ${cookies.accessToken}`);
 
         if (
+            !responseGetBlogAuthors ||
+            responseGetBlogAuthors.statusCode !== 200 ||
             !responseGetBlogTopics ||
             responseGetBlogTopics.statusCode !== 200 ||
             !responseGetBlogTags ||
@@ -33,12 +36,13 @@ export const getServerSideProps: GetServerSideProps = async context =>
         }
 
         return {
+            blogAuthors: responseGetBlogAuthors.data,
             blogTopics: responseGetBlogTopics.data,
             blogTags: responseGetBlogTags.data,
         };
     });
 
-const Page = ({ blogTopics, blogTags }: { blogTopics: any; blogTags: any }) => {
+const Page = ({ blogAuthors, blogTopics, blogTags }: { blogAuthors: any; blogTopics: any; blogTags: any }) => {
     const router = useRouter();
 
     return (
@@ -75,6 +79,24 @@ const Page = ({ blogTopics, blogTags }: { blogTopics: any; blogTags: any }) => {
                             identifier: '{id}',
                         }}
                         fields={[
+                            {
+                                type: 'select-sync',
+                                name: 'authorId',
+                                placeholder: 'Select an author',
+                                title: 'Author',
+                                initialValue: null,
+                                options: _.map(blogAuthors, (author: any) => ({
+                                    value: author.id,
+                                    label: author.name,
+                                })),
+                                isSearchable: true,
+                                isClearable: false,
+                                validate: (values: any) => {
+                                    if (!values.authorId) return 'Required!';
+
+                                    return null;
+                                },
+                            },
                             {
                                 type: 'select-sync',
                                 name: 'topicId',
