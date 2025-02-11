@@ -1,20 +1,20 @@
-# Use an official Node.js image as the base
-FROM node:18.20.4
+# Use Node.js 18.20.6 LTS
+FROM node:18.20.6
 
 # Set working directory
 WORKDIR /app
 
-# Copy package.json and yarn.lock
-COPY package.json yarn.lock ./
+# Copy application code
+COPY . . 
 
 # Install dependencies
-RUN yarn install
-
-# Copy application code
-COPY . .
+RUN yarn install --frozen-lockfile
 
 # Build the application
 RUN yarn build
 
+# Expose the application port
+EXPOSE 8081
+
 # Start the application
-CMD ["yarn", "start:prod"]
+CMD ["node", "server.js"]
