@@ -49,27 +49,15 @@ const Page = () => {
                         fields={[
                             {
                                 type: 'text',
-                                name: 'name',
-                                placeholder: 'Enter topic name!',
-                                title: 'Name',
-                                initialValue: null,
-                                validate: (values: any) => {
-                                    if (!values.name) return 'Required!';
-
-                                    return null;
-                                },
-                            },
-                            {
-                                type: 'text',
                                 name: 'thumbnailUrl',
                                 placeholder: 'Enter topic thumbnail URL!',
                                 title: 'Thumbnail Url',
                                 initialValue: null,
-                                validate: (values: any) => {
-                                    if (!values.thumbnailUrl) return 'Required!';
+                                // validate: (values: any) => {
+                                //     if (!values.thumbnailUrl) return 'Required!';
 
-                                    return null;
-                                },
+                                //     return null;
+                                // },
                             },
                             {
                                 type: 'text',
@@ -77,11 +65,11 @@ const Page = () => {
                                 placeholder: 'Enter topic banner URL!',
                                 title: 'Banner Url',
                                 initialValue: null,
-                                validate: (values: any) => {
-                                    if (!values.bannerUrl) return 'Required!';
+                                // validate: (values: any) => {
+                                //     if (!values.bannerUrl) return 'Required!';
 
-                                    return null;
-                                },
+                                //     return null;
+                                // },
                             },
                             {
                                 type: 'text',
