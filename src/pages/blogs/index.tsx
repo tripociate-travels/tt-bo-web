@@ -64,7 +64,10 @@ const Page = ({ blogAuthors, blogTopics, blogTags }: { blogAuthors: any; blogTop
                             onDataModify: data =>
                                 _.map(data, datum => ({
                                     ...datum,
-                                    author: datum?.author?.user?.name,
+                                    author:
+                                        datum?.author?.name ||
+                                        datum?.author?.user?.name ||
+                                        datum?.author?.customer?.name,
                                     topic: datum?.topic?.name,
                                     tags: (datum?.tags as any[])?.map(tag => tag?.tag?.name)?.join(', '),
                                 })),
@@ -175,6 +178,13 @@ const Page = ({ blogAuthors, blogTopics, blogTags }: { blogAuthors: any; blogTop
                                 name: 'summary',
                                 placeholder: 'Submit a summary of the blog',
                                 title: 'Summary',
+                                initialValue: null,
+                            },
+                            {
+                                type: 'text',
+                                name: 'metaTags',
+                                placeholder: 'Submit meta tags of the blog',
+                                title: 'Meta Tags',
                                 initialValue: null,
                             },
                             {
