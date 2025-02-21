@@ -72,6 +72,8 @@ const UrlBasedColumnItem = ({ url }: { url: string }) => {
                         style={{ width: '100px' }}
                     />
                 )}
+                <br />
+                {_.isUndefined(url) || _.isNull(url) || _.isEqual(url, '') ? null : <span>{url}</span>}
             </div>
         ),
         []

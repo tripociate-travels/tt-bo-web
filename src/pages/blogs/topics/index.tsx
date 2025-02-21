@@ -9,6 +9,7 @@ import _ from 'lodash';
 // application
 import { getAuthorized } from '../../../libs/auth';
 import GenericViewGenerator from '../../../components/global/GenericViewGenerator';
+import { UrlBasedColumnItem } from '../../../components';
 import { getGeneralStatusOptions } from '../../../utils';
 
 export const getServerSideProps: GetServerSideProps = async context =>
@@ -29,8 +30,11 @@ const Page = () => {
                         subtitle={'Manage blog topics here!'}
                         viewAll={{
                             uri: `/api/v1/blog-topics`,
-                            ignoredColumns: ['id', 'createdAt', 'updatedAt'],
+                            ignoredColumns: ['createdAt', 'updatedAt'],
                             actionIdentifier: 'id',
+                            scopedColumns: {
+                                thumbnailUrl: (item: any) => <UrlBasedColumnItem url={item.thumbnailUrl} />,
+                            },
                             onDataModify: data =>
                                 _.map(data, datum => ({
                                     ...datum,
