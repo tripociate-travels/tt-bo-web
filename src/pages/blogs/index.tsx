@@ -151,6 +151,14 @@ const Page = ({ blogAuthors, blogTopics, blogTags }: { blogAuthors: any; blogTop
                             },
                             {
                                 type: 'text',
+                                name: 'slug',
+                                placeholder: 'Enter blog slug!',
+                                title: 'Slug',
+                                initialValue: null,
+                                isDisabled: true,
+                            },
+                            {
+                                type: 'text',
                                 name: 'title',
                                 placeholder: 'Enter blog title!',
                                 title: 'Title',
