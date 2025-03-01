@@ -53,14 +53,26 @@ export const getImageFormFields = (tripId: string): IField[] => {
                 return null;
             },
         },
+        // {
+        //     type: 'file-select',
+        //     name: 'url',
+        //     placeholder: 'Select image file!',
+        //     title: 'Image Upload',
+        //     initialValue: null,
+        //     acceptType: 'image/*',
+        //     maxFileSize: 1048576,
+        //     validate: (values: any) => {
+        //         if (!values.url) return 'Required!';
+
+        //         return null;
+        //     },
+        // },
         {
-            type: 'file-select',
+            type: 'text',
             name: 'url',
-            placeholder: 'Select image file!',
-            title: 'Image Upload',
+            placeholder: 'Enter src link for this image!',
+            title: 'URL',
             initialValue: null,
-            acceptType: 'image/*',
-            maxFileSize: 1048576,
             validate: (values: any) => {
                 if (!values.url) return 'Required!';
 
@@ -142,7 +154,8 @@ export const ImageList = (tripId: string, fields: IField[]) => (
                 })),
         }}
         addNew={{
-            uri: `/api/v1/images`,
+            // uri: `/api/v1/images`,
+            uri: `/api/v1/save-image-without-file`,
             buttonText: 'Add Image',
         }}
         viewOne={{ uri: '/api/v1/images/{id}', identifier: '{id}' }}
@@ -152,7 +165,7 @@ export const ImageList = (tripId: string, fields: IField[]) => (
             identifier: '{id}',
         }}
         fields={fields}
-        editFields={[..._.filter(fields, (field: IField) => field.name !== 'tripId' && field.name !== 'url')]}
+        editFields={[..._.filter(fields, (field: IField) => field.name !== 'tripId')]}
     />
 );
 
