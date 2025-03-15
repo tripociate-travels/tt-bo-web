@@ -62,6 +62,21 @@ const Page = () => {
                                     return null;
                                 },
                             },
+                            {
+                                type: 'multi-select-sync',
+                                name: 'badges',
+                                placeholder: 'Select badges!',
+                                title: 'Badges',
+                                initialValue: null,
+                                options: [
+                                    { label: 'Featured', value: 'Featured' },
+                                    { label: 'Price Drop', value: 'Price Drop' },
+                                    { label: 'Fresh Find', value: 'Fresh Find' },
+                                    { label: 'Popular', value: 'Popular' },
+                                    { label: 'Best Deal', value: 'Beat Deal' },
+                                    { label: 'Luxury', value: 'Luxury' },
+                                ],
+                            },
                         ]}
                     />
                 ),
