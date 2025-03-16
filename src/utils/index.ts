@@ -402,7 +402,7 @@ export const isJSONString = (string: string) => {
 };
 
 export const getTripGeneralTypeOptions = [
-    { label: 'Holiday Package', value: 'HOLIDAY_PACKAGE' },
+    { label: 'Travel Package', value: 'TRAVEL_PACKAGE' },
     { label: 'Umrah Package', value: 'UMRAH_PACKAGE' },
     { label: 'Group Tour', value: 'GROUP_TOUR' },
     { label: 'Visa', value: 'VISA' },

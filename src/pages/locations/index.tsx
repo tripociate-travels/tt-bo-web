@@ -34,6 +34,7 @@ const Page = () => {
                             onDataModify: (data: any[]) =>
                                 _.map(data, datum => ({
                                     id: datum.id,
+                                    badges: !datum.badges ? '' : datum.badges.join(', '),
                                     name: datum.name,
                                     city: datum?.city?.name,
                                     state: datum?.city?.state?.name,

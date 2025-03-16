@@ -5,6 +5,7 @@ import { GetServerSideProps } from 'next';
 import { useRouter } from 'next/router';
 import { Panel } from 'primereact/panel';
 import { TabView, TabPanel } from 'primereact/tabview';
+import copy from 'copy-to-clipboard';
 import _ from 'lodash';
 
 // application libraries
@@ -92,6 +93,17 @@ const Page = ({
 
     return (
         <Panel header={trip.name}>
+            <p>
+                Slug:{' '}
+                <span
+                    className="text-lg font-bold cursor-pointer text-blue-500 hover:underline"
+                    onClick={() => {
+                        copy(trip.slug);
+                    }}
+                >
+                    {trip.slug}
+                </span>
+            </p>
             {useMemo(
                 () =>
                     !locations || _.size(locations) === 0 ? null : (

@@ -1,4 +1,6 @@
 import React, { useCallback, useMemo } from 'react';
+
+// Third-party libraries
 import { Button } from 'primereact/button';
 import copy from 'copy-to-clipboard';
 import _ from 'lodash';

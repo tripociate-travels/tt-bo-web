@@ -113,11 +113,11 @@ const DataTable = ({
                     <FontAwesomeIcon icon={faComputerMouse} className="ml-2" />
                 </p>
             }
-            columnResizeMode="expand"
-            resizableColumns
+            // columnResizeMode="expand"
+            // resizableColumns
             showGridlines
-            scrollable={true}
-            scrollHeight="100vh"
+            // scrollable={true}
+            // scrollHeight="100vh"
         >
             {_.map(columns, item => {
                 return (

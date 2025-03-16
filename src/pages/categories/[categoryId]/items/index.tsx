@@ -79,6 +79,7 @@ const Page = ({ categoryId }: { categoryId: number }) => {
                             onDataModify: data =>
                                 _.map(data, datum => ({
                                     ...datum,
+                                    badges: !datum.badges ? '' : datum.badges.join(', '),
                                     startDate: !datum.startDate
                                         ? null
                                         : getFormattedDatetime(datum.startDate, DATE_FORMAT.DATE_REPORT),
