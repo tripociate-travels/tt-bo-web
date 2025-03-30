@@ -14,6 +14,7 @@ import { getGeneralStatusOptions } from '../../../../../../utils';
 import TabViewComponent from '../../../../../../components/trips/TabViewComponent';
 import WrapperComponent from '../../../../../../components/trips/WrapperComponent';
 import { IField } from '../../../../../../components/global/GenericFormGenerator';
+import { UrlBasedColumnItem } from '../../../../../../components';
 
 export const getServerSideProps: GetServerSideProps = async context =>
     getAuthorized(context, 'Images | Fixed Package Trip Management', async cookies => {
@@ -133,8 +134,7 @@ export const ImageList = (tripId: string, fields: IField[]) => (
             scopedColumns: {
                 url: (item: any) => (
                     <>
-                        <span className="p-column-title">{item.title}</span>
-                        <img src={item.url} alt={item.title} className="shadow-2" width="100" />
+                        <UrlBasedColumnItem url={item.url} />
                     </>
                 ),
                 status: (item: any) => (

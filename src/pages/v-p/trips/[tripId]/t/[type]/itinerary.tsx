@@ -101,7 +101,7 @@ export const ItineraryList = (tripId: string) => (
                 },
             },
             {
-                type: 'textarea',
+                type: 'richtext',
                 name: 'body',
                 placeholder: 'Enter body for itinerary',
                 title: 'Body (Description)',
