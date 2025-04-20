@@ -137,7 +137,7 @@ const Page = ({ locations }: { locations: ILocation[] }) => {
                                         initialValue: null,
                                         options: _.map(locations, (location: ILocation) => ({
                                             value: location.id,
-                                            label: `${location.name}, ${location.city.name}, ${location.city.state.name}, ${location.city.state.country.name}`,
+                                            label: `${location.name}, ${location.city?.name}, ${location.city?.state.name}, ${location.city?.state.country.name}`,
                                         })),
                                     },
                                     {
